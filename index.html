@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUMMARY</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <div class="wrapper">
-
         <div class="content">
             <header class="header">
                 <h1 id="id-one">Summary</h1>
@@ -26,7 +23,6 @@
                     </ul>
                 </nav>
             </header>
-
             <main>
                 <section class="contact" id="id-cont">
                     <h2>Contacts:</h2>
@@ -34,27 +30,23 @@
                     <p>| Mail: ilyanavumenka@icloud.com</p>
                     <p>| Telegram: @ilyanavumenka</p>
                 </section>
-
                 <section class="task">
                     <h2>Task:</h2>
                     <hr>
                     <p>
-                        To acquire knowledge and experience in frontend/javascript development for making perspective carrier and be professional in this field.
+                        To acquire knowledge and experience in frontend/javascript development for making perspective
+                        carrier and be professional in this field.
                     </p>
                 </section>
-
                 <section class="skills">
                     <h2>Skills</h2>
                     <hr>
-
                     <h3>Professional skills:</h3>
                     <ul>
                         <li>Basic knowledge of languages: JS, NodeJS</li>
                         <li>HTML5/CSS3</li>
                         <li>MongoDB, PostgreSQL</li>
                     </ul>
-
-
                     <h3>Languages skills:</h3>
                     <ul>
                         <li>Russian</li>
@@ -66,7 +58,9 @@
                 <section>
                     <h2>Completed JS tasks:</h2>
                     <hr>
-                    <div class="js-a"><a href="https://www.codewars.com/users/ilyanavumenka/completed_solutions"><b>Codewars tasks (link)</b></a></div>
+                    <div class="js-a"><a
+                            href="https://www.codewars.com/users/ilyanavumenka/completed_solutions"><b>Codewars tasks
+                                (link)</b></a></div>
                 </section>
                 <hr>
                 <section class="latest_code">
@@ -97,47 +91,6 @@
                             
                                 console.log("CTX", ctx);
                                 console.log("message", ctx.message);
-                            
-                            
-                            
-                                let eventDetails = ctx.message.text.split(' ');
-                                console.log("EVENT DETAILS", eventDetails);
-                                let eventType;
-                                let eventDay;
-                                let eventTime;
-                            
-                                eventDetails.forEach((value) => {
-                                    if (WEEKDAYS.includes(value)) {
-                                        eventDay = value;
-                                    }
-                                    if (GAMES.includes(value)) {
-                                        eventType = value;
-                                    }
-                                    if (EVENT_TIME_REGEXP.test(value)) {
-                                        eventTime = value;
-                                    }
-                                });
-                            
-                                if(eventDay && eventTime && eventType) {
-                                    let event = {
-                                        _id: UUID_V4(),
-                                        username: ctx.message.from.is_bot ? "BOT" : ctx.message.from.username,
-                                        user_id: ctx.message.from.id,
-                                        timestamp: new Date(ctx.message.date),
-                                        details: {
-                                            type: eventType,
-                                            day: eventDay,
-                                            time: eventTime
-                                        }
-                                    };
-                                    return event;
-                                } else {
-                                    return false;
-                                }
-                            
-                            };
-                            
-                            module.exports = eventParser;
                         </code>
                         </pre>
                     </article>
@@ -166,5 +119,4 @@
         </div>
     </div>
 </body>
-
 </html>
